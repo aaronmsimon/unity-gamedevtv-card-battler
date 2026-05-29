@@ -14,13 +14,6 @@ by [GameDev.tv](https://www.gamedev.tv)
     </tr>
 </table>
 
-<table>
-    <tr>
-        <td><img src="https://gamedev.tv/_next/image?url=https%3A%2F%2Fgamedev-files.b-cdn.net%2Fsupport-imaginery%2Ftvvxadocz52j.gif&w=1920&q=75" /></td>
-        <td><img src="https://gamedev.tv/_next/image?url=https%3A%2F%2Fgamedev-files.b-cdn.net%2Fsupport-imaginery%2Fqw9qyr6hlapz.gif&w=1920&q=75" /></td>
-    </tr>
-</table>
-
 ## Instructor
 <img src="https://gamedev.tv/_next/image?url=https%3A%2F%2Fgamedev-files.b-cdn.net%2Finstructors%2F2g6bbi4emuic.png&w=256&q=75" width="15%" />
 <h4>Grant Schonhoff</h4>
