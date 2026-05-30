@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using TMPro;
 
-public class Card : MonoBehaviour
+public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private SpriteRenderer illustrationRenderer;
     [SerializeField] private TextMeshPro cardNameText;
@@ -42,7 +43,7 @@ public class Card : MonoBehaviour
         actionsText.text = cardData.actionCost.ToString();
     }
 
-    private void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Mouse entered");
         transform.localScale = originalScale * hoverScale;
@@ -50,7 +51,7 @@ public class Card : MonoBehaviour
         sortingGroup.sortingOrder += 1;
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("Mouse exited");
         transform.localScale = originalScale;
