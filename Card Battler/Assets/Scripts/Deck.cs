@@ -11,7 +11,6 @@ public class Deck : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(DrawCard());
         DeckDrawVisuals();
     }
 
@@ -23,6 +22,7 @@ public class Deck : MonoBehaviour
             int topIndex = drawPile.Count - 1;
             CardData data = drawPile[topIndex];
             drawPile.RemoveAt(topIndex);
+            Debug.Log($"{data} has been drawn");
             return data;
         }
 

@@ -10,8 +10,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private TextMeshPro descriptionText;
     [SerializeField] private TextMeshPro actionsText;
 
-    [SerializeField] private CardData tempCardData;
-
     [SerializeField] private float hoverScale = 2f;
     [SerializeField] private float hoverOffset = 2f;
 
@@ -31,8 +29,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         originalScale = transform.localScale;
         originalPos = transform.localPosition;
         originalSortOrder = sortingGroup.sortingOrder;
-
-        LoadCardData(tempCardData);
     }
 
     public void LoadCardData(CardData cardData)
