@@ -5,9 +5,14 @@ public class Deck : MonoBehaviour
 {
     [SerializeField] private List<CardData> drawPile = new List<CardData>();
 
+    [Header("Card Back")]
+    [SerializeField] private GameObject cardBack;
+    [SerializeField] private float cardBackOffset = 0.1f;
+
     private void Start()
     {
         Debug.Log(DrawCard());
+        DeckDrawVisuals();
     }
 
     public CardData DrawCard()
@@ -22,5 +27,14 @@ public class Deck : MonoBehaviour
         }
 
         return null;
+    }
+
+    private void DeckDrawVisuals()
+    {
+        for (int i = 0; i < drawPile.Count; i++)
+        {
+            GameObject newCardBack = Instantiate(cardBack, transform);
+            newCardBack.transform.localPosition = new Vector3(0f, -i * cardBackOffset, 0f);
+        }
     }
 }
