@@ -18,8 +18,6 @@ public class Card : MonoBehaviour
     private SortingGroup sortingGroup;
     private int originalSortOrder;
 
-    private Vector3 mousePos;
-
     private void Awake()
     {
         sortingGroup = GetComponent<SortingGroup>();
