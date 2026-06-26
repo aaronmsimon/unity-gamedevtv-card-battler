@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
@@ -8,6 +7,7 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] private Transform[] cardSlots;
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private int startingHandSize = 2;
+    [SerializeField] private DiscardPile discardPile;
 
     private List<Card> cards = new List<Card>();
 
@@ -41,5 +41,12 @@ public class PlayerHand : MonoBehaviour
         cardComponent.LoadCardData(cardData);
         cards.Add(cardComponent);
         cards[slotIndex].transform.SetParent(cardSlots[slotIndex]);
+    }
+
+    public void PlayCard(Card card)
+    {
+        Debug.Log("Play card");
+        cards.Remove(card);
+        discardPile.DiscardCard(card.GetCardData());
     }
 }

@@ -21,6 +21,8 @@ public class Card : MonoBehaviour
 
     private static bool isBeingDragged = false; // static so in case raycast goes through one card to another
 
+    private CardData cardData;
+
     private void Awake()
     {
         sortingGroup = GetComponent<SortingGroup>();
@@ -35,6 +37,7 @@ public class Card : MonoBehaviour
 
     public void LoadCardData(CardData cardData)
     {
+        this.cardData = cardData;
         illustrationRenderer.sprite = cardData.illustration;
         cardNameText.text = cardData.cardName;
         descriptionText.text = cardData.description;
@@ -82,4 +85,6 @@ public class Card : MonoBehaviour
         transform.localPosition = originalPos;
         sortingGroup.sortingOrder = originalSortOrder;        
     }
+
+    public CardData GetCardData() => cardData;
 }
