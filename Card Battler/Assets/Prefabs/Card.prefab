@@ -405,8 +405,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3890459176081247919}
   - {fileID: 1186408388396671445}
@@ -1097,7 +1097,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6079972636882353800}
@@ -1119,7 +1119,8 @@ MonoBehaviour:
   cardNameText: {fileID: 2039275379166341389}
   descriptionText: {fileID: 7790348673565969396}
   actionsText: {fileID: 8086088549709025518}
-  tempCardData: {fileID: 11400000, guid: 2889a518748c0fb4e86a17adebd1088b, type: 2}
+  hoverScale: 2
+  hoverOffset: 2
 --- !u!61 &7315645693237713133
 BoxCollider2D:
   m_ObjectHideFlags: 0

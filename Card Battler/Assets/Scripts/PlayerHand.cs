@@ -48,5 +48,6 @@ public class PlayerHand : MonoBehaviour
         Debug.Log("Play card");
         cards.Remove(card);
         discardPile.DiscardCard(card.GetCardData());
+        Destroy(card.gameObject);
     }
 }
